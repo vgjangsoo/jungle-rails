@@ -1,0 +1,17 @@
+<% if product = Product.find_by(id: item.product_id) %>
+
+<tr>
+  <td>
+    <h4><%= product.name %></h4>
+  </td>
+  <td>
+    <%= product.price %>
+  </td>
+  <td>
+    <%= item.quantity %>
+  </td>
+  <td>
+    <%= item.total_price %>
+  </td>
+</tr>
+<% end %>

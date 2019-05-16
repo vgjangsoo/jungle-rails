@@ -40,6 +40,12 @@
     </table>
   </div>
 
+  <% if current_user %>
+    <% UserMailer.order_receipt(current_user.first_name, current_user.email, @order, total_amount).deliver_now %>
+  <% elsif %>
+    <% UserMailer.order_receipt("customer", "kvirani@gmail.com", @order, total_amount).deliver_now %>
+  <% end %>
+
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
