@@ -1,6 +1,7 @@
 class UserMailer < ApplicationMailer
   default from: "no-reply@jungle.com"
 
+  # Send e-mail through action mailer
   def order_receipt(user_name, user_email, order, total_amount)
     @user = user_name
     @order  = order

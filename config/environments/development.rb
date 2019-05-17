@@ -41,6 +41,8 @@ Rails.application.configure do
 
   config.web_console.whitelisted_ips = ['10.0.2.0/24']
 
+
+  # to send an actuall e-mail.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',

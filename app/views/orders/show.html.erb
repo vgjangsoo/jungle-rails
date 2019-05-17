@@ -40,6 +40,7 @@
     </table>
   </div>
 
+  <%# Send e-mail to logged in users if not then send it to default email %>
   <% if current_user %>
     <% UserMailer.order_receipt(current_user.first_name, current_user.email, @order, total_amount).deliver_now %>
   <% elsif %>
