@@ -26,6 +26,26 @@
       </div>
     </div>
 
+      <div class="row">
+        <div class="col-sm-4">
+          <dl class="dl-vertical">
+            <h3>Reviews</h3>
+            <% if @review %>
+            <% @product.reviews.each do |review| %> 
+              <dt> <%= review.user.first_name %> : <%= review.description %> </dt>
+              <dd> Rating: <% review.rating.times do %> 
+                <span class="glyphicon glyphicon-star"></span>
+                <% end %>
+              </dd>
+              </br>
+              <% end %>
+          </dl>
+        </div>
+      </div>
+      <% end %>
+
+
   </article>
 
 </section>
+
