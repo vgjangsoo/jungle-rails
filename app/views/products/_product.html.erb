@@ -24,14 +24,20 @@
       <% end %>  
     </div>      
   </p>
+
+  <% # If product's quantity is 0 do not show "add to cart" button. %>
+  
   <footer class="actions">
-    <%= button_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary' , method: :post do %>
-      <%= fa_icon "shopping-cart", text: 'Add' %>
+    <% if product.quantity > 0 %>
+      <%= button_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary' , method: :post do %>
+        <%= fa_icon "shopping-cart", text: 'Add' %>
+      <% end %>
     <% end %>
-    <%= link_to product, class: 'btn btn-default pull-right' do %>
-      Details &raquo;
-    <% end %>
+      <%= link_to product, class: 'btn btn-default pull-right' do %>
+        Details &raquo;
+      <% end %>
   </footer>
+  
 
   <aside class="price">
     <%= humanized_money_with_symbol product.price %>
