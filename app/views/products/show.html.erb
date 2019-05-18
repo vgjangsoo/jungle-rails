@@ -45,7 +45,7 @@
             <% end %>
 
             <% if @review %>
-            <% @product.reviews.each do |review| %> 
+            <% @product.reviews.reverse.each do |review| %> 
               <dt> <%= review.user.first_name %> : <%= review.description %> </dt>
               <dd> Rating: <% review.rating.times do %> 
 
@@ -53,6 +53,9 @@
                 <span class="glyphicon glyphicon-star"></span>
                 <% end %>
               </dd>
+                <% if review.user == current_user %>
+                  <dd> <%= link_to 'Delete', product_review_path(review.product_id, review.id), method: :delete, data: { confirm: "Are you sure?" } %> </dd>
+                <% end%>
               </br>
               <% end %>
           </dl>
