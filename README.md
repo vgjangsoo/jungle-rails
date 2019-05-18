@@ -5,17 +5,17 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 ## Screent Shots
 
 ### Main Page
-!["Sreenshot of main page"]()
+!["Sreenshot of main page"](https://github.com/vgjangsoo/jungle-rails/blob/master/docs/main_page.png)
 
 ---------------------------------
 
 ### Product Detail Page
-!["Sreenshot of product detail page"]()
+!["Sreenshot of product detail page"](https://github.com/vgjangsoo/jungle-rails/blob/master/docs/product_detail_page.png)
 
 ---------------------------------
 
 ### Checkout Page
-!["Sreenshot of checkout page"]()
+!["Sreenshot of checkout page"](https://github.com/vgjangsoo/jungle-rails/blob/master/docs/check_out_page.png)
 
 ---------------------------------
 
