@@ -14,7 +14,7 @@
       <% if product.reviews.size > 0 %>
         <% overall = 0 %>
         <% product.reviews.each do |review| %>
-        <% overall = review.rating + overall %>
+          <% overall = review.rating + overall %>
         <% end %>
         <% overall = overall / product.reviews.size %>
         Overall Rating: 
