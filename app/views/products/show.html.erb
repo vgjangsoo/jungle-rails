@@ -31,7 +31,7 @@
           <dl class="dl-vertical">
             <h3>Reviews</h3>
 
-            <%= form_for @review, url: '`/products/#{@product.id}/reviews`' do |f| %>
+            <%= form_for @review, url: product_reviews_path(@product) do |f| %>
 
               <div class="form-group">
                 <dt> Description: </dt> <%= f.text_area :description, class: 'form-control' %> 
