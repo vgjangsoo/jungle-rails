@@ -30,10 +30,26 @@
         <div class="col-sm-4">
           <dl class="dl-vertical">
             <h3>Reviews</h3>
+
+            <%= form_for [@product, @review], url: '`/products/#{@product.id}/review`' do |f| %>
+
+              <div class="form-group">
+                <dt> Description: <%= f.text_area :description, class: 'form-control' %> </dt>
+              </div>
+
+              <div class="form-group">
+                Rating: <%= f.select :rating, %w{ 1 2 3 4 5 }, {:prompt => "Rate..."} %> 
+                <%= f.submit "Submit", class: 'btn btn-primary', :style => 'margin-left: 100px;'%>
+              </div>
+              </br>
+            <% end %>
+
             <% if @review %>
             <% @product.reviews.each do |review| %> 
               <dt> <%= review.user.first_name %> : <%= review.description %> </dt>
               <dd> Rating: <% review.rating.times do %> 
+
+                <% # Use stars to show ratings. %>
                 <span class="glyphicon glyphicon-star"></span>
                 <% end %>
               </dd>
@@ -48,4 +64,3 @@
   </article>
 
 </section>
-
