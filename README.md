@@ -2,6 +2,24 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Screent Shots
+
+### Main Page
+!["Sreenshot of main page"]()
+
+---------------------------------
+
+### Product Detail Page
+!["Sreenshot of product detail page"]()
+
+---------------------------------
+
+### Checkout Page
+!["Sreenshot of checkout page"]()
+
+---------------------------------
+
+
 
 ## Setup
 

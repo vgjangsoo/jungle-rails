@@ -22,6 +22,19 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
+          <% if @product.reviews.size > 0 %>
+            <dt>Overall Rating</dt>
+            <dd>
+            <% overall = 0 %>
+            <% @product.reviews.each do |review| %>
+              <% overall = review.rating + overall %>
+            <% end %>
+            <% overall = overall / @product.reviews.size %>
+            <% overall.times do %>
+              <span class="glyphicon glyphicon-star"></span>
+            <% end %>
+            </dd>
+          <% end %>
         </dl>
       </div>
     </div>
