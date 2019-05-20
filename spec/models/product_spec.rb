@@ -10,7 +10,7 @@ RSpec.describe Product, type: :model do
         price: 34.00,
         quantity: 15
       )
-      expect(product).to (be_valid)
+      expect(product).to be_valid
     end
 
     it 'is not valid without a name' do
