@@ -12,6 +12,8 @@ require "capybara/rspec"
 require "capybara/poltergeist" # To require poltergeist
 
 Capybara.javascript_driver = :poltergeist
+Capybara.default_max_wait_time = 10
+
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
